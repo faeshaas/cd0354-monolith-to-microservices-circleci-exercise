@@ -2,8 +2,8 @@
 version: 2.1
 
 jobs:
-  build:            # job name
-    docker:         # executor type
+  build: # job name
+    docker: # executor type
       - image: cimg/base:current # Docker image that installs Docker and has Git,
     working_directory: ~/app
     steps:
@@ -12,7 +12,7 @@ jobs:
           version: 20.10.14
       - run:
           name: Install dependencies
-          command: echo "No need to install anything. \n Just build and push the Docker image."
+          command: echo "No need to install anything. \n Just build and push the Docker image. Test"
       - run:
           name: Build and push Docker image
           command: |
